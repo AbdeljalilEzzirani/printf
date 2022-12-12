@@ -6,13 +6,14 @@
 /*   By: abez-zir <abez-zir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 23:59:10 by abez-zir          #+#    #+#             */
-/*   Updated: 2022/12/11 03:51:32 by abez-zir         ###   ########.fr       */
+/*   Updated: 2022/12/12 02:43:44 by abez-zir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int ft_putchar(char c)
+int	ft_putchar(int c)
 {
-	return (write(1, &c, 1));
+	write(1, &c, 1);
+	return (0);
 }

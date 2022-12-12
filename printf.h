@@ -6,7 +6,7 @@
 /*   By: abez-zir <abez-zir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 00:07:48 by abez-zir          #+#    #+#             */
-/*   Updated: 2022/12/11 03:50:09 by abez-zir         ###   ########.fr       */
+/*   Updated: 2022/12/12 02:49:16 by abez-zir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,12 @@
 # include <stdio.h>
 # include <stdarg.h>
 
-
-
-int	        ft_printf(const char *content, ...);
-void        ft_the_job(va_list list, const char ch);
-int 	    ft_putchar(char c);
-void	    ft_putstr(char *s);
-void	    ft_putnbr(long n);
-size_t	    ft_strlen(const char *s);
+int			ft_printf(const char *content, ...);
+int			ft_the_job(va_list list, const char ch);
+int			ft_putchar(int c);
+int			ft_putstr(char *s);
+int			ft_putnbr(long n);
+size_t		ft_strlen(const char *s);
+int			ft_hexa(unsigned long n, char *base);
 
 #endif

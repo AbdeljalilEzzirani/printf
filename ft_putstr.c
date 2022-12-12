@@ -12,16 +12,19 @@
 
 #include "printf.h"
 
-void	ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
 	int					i;
+	int					count;
 
 	if (s == NULL)
-		return ;
+		write (1, "(NULL)", 6);
+	count = 0;
 	i = 0;
 	while (s[i])
 	{
-		write (1, &s[i], 1);
+		count += write (1, &s[i], 1);
 		i++;
 	}
+	return (count);
 }
