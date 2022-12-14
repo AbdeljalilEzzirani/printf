@@ -6,7 +6,7 @@
 /*   By: abez-zir <abez-zir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 22:09:55 by abez-zir          #+#    #+#             */
-/*   Updated: 2022/12/12 02:42:51 by abez-zir         ###   ########.fr       */
+/*   Updated: 2022/12/13 20:26:10 by abez-zir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	ft_printf(const char *content, ...)
 	int					nbr;
 
 	i = 0;
+	nbr = 0;
 	va_start(list, content);
 	while (content[i])
 	{
@@ -36,20 +37,3 @@ int	ft_printf(const char *content, ...)
 	va_end(list);
 	return (nbr);
 }
-/*
-int main ()
-{
-    char *p;
-    //char p[]="I'm here";
-    //int  n;
-    //n = -54483649;
-    //char            c;
-    //c = 'H';
-    int i;
-    int j;
-    i = ft_printf("hello", p);
-    j = printf("hello", p);
-    ft_printf("%d\n",i);
-    printf("%d\n",j);
-}
-*/

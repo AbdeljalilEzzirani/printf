@@ -6,13 +6,13 @@
 /*   By: abez-zir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 21:25:48 by abez-zir          #+#    #+#             */
-/*   Updated: 2022/12/12 02:38:16 by abez-zir         ###   ########.fr       */
+/*   Updated: 2022/12/14 11:19:53 by abez-zir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_hexa(unsigned long n, char *base)
+int	ft_hexa_low(unsigned int n, char *base)
 {
 	int					count;
 
@@ -21,8 +21,8 @@ int	ft_hexa(unsigned long n, char *base)
 		count += ft_putchar(base[n]);
 	else if (n >= 16)
 	{
-		count += ft_hexa(n / 16, base);
-		count += ft_hexa(n % 16, base);
+		count += ft_hexa_low(n / 16, base);
+		count += ft_hexa_low(n % 16, base);
 	}
 	return (count);
 }

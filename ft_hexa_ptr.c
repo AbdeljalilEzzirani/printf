@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_hexa_ptr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abez-zir <abez-zir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abez-zir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/10 19:10:19 by abez-zir          #+#    #+#             */
-/*   Updated: 2022/12/11 00:27:41 by abez-zir         ###   ########.fr       */
+/*   Created: 2022/12/13 20:17:56 by abez-zir          #+#    #+#             */
+/*   Updated: 2022/12/13 20:25:16 by abez-zir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_hexa_ptr(unsigned long n, char *base)
 {
-	size_t				i;
+	int					count;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	count = 0;
+	if (n >= 0 && n <= 15)
+		count += ft_putchar(base[n]);
+	else if (n >= 16)
+	{
+		count += ft_hexa_ptr(n / 16, base);
+		count += ft_hexa_ptr(n % 16, base);
+	}
+	return (count);
 }
